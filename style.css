@@ -56,8 +56,9 @@ button {
     cursor: pointer;
     transition: transform 0.3s ease;
 
-    width: 200px;
-    height: 60px;
+    width: min(80vw, 320px);
+    height: auto;
+    min-height: 60px;
 
     display: flex;
     justify-content: center;
@@ -100,7 +101,7 @@ button {
     position: absolute;
     left: 50%;
     bottom: 120px;
-    transform: translateX(-50%) scale(0.6);
+    transform: translateX(-50%) scale(1);
     opacity: 0;
     transition: all 1.4s ease;
 }
@@ -109,4 +110,35 @@ button {
     bottom: 50%;
     transform: translate(-50%, 50%) scale(1);
     opacity: 1;
+}
+
+@media (max-width: 600px){
+
+    body{
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .main-img{
+        width: 70vw;
+        max-width: 260px;
+    }
+
+    button{
+        width: 85vw;
+        font-size: 1.3rem;
+        padding: 18px 10px;
+    }
+
+    .buttons{
+        width: 100%;
+        gap: 25px;
+    }
 }
